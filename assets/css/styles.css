@@ -1,8 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:wght@200&display=swap'); 
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Outfit", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #323030 !important;
+    background-color: #252323 !important;
 }
 
 .container {
@@ -12,11 +16,26 @@ body {
 
 header {
     color: #fff;
+    margin: 0;
 }
 
 header h1 {
     margin: 0;
     font-size: 32px;
+    color: #fff;
+}
+
+h2 {
+  color: #A90015 !important;
+}
+
+h3 {
+  color: #CED2DC !important;
+  
+}
+
+.navbar-brand img {
+  height: 50px;
 }
 
 /* navigation */
@@ -50,7 +69,7 @@ nav {
 
   a:link {
     text-decoration: none;
-    color: #fff;
+    color: #fff !important;
   }
   
   a::after {
@@ -62,6 +81,7 @@ nav {
     background-color: transparent;
     width: 0;
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Smooth transition */
+    color: #fff;
   }
   
   a:hover::after {
@@ -84,6 +104,10 @@ nav {
   a:hover::before {
     width: 100%; /* Ensure underline is shown when hovered over */
     background-color: red; /* Underline color */
+  }
+
+  a:visited {
+    color: #fff;
   }
   
   /* end navigation   */
