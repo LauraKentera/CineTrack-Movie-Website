@@ -1,0 +1,16 @@
+#carouselExampleRide {
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.carousel-item img {
+    width: 100%; /* Ensure the image takes the full width of the carousel */
+    height: 100%; /* Ensure the image takes the full height of the carousel */
+    object-fit: cover; /* Prevent the image from stretching while covering the carousel */
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
