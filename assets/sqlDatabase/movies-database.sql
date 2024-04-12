@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 CREATE DATABASE IF NOT EXISTS movies_database;
 
 USE movies_database;
@@ -15,7 +13,7 @@ CREATE TABLE IF NOT EXISTS movies(
   'rating' VARCHAR(5),
   'img_path' VARCHAR(1000)
 );
->>>>>>> b9dba2c44e9da209e43e8ea51764306258f5bf98
+
 
 INSERT INTO
   movies(
