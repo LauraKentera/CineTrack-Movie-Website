@@ -1,3 +1,21 @@
+
+-- CREATE DATABASE IF NOT EXISTS movies_database;
+
+USE movies_database;
+
+CREATE TABLE IF NOT EXISTS movies(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(50),
+  date DATE,
+  length INT,
+  description VARCHAR(1000),
+  genre VARCHAR(30),
+  rating VARCHAR(5),
+  img_path VARCHAR(1000)
+);
+
+
+
 INSERT INTO
   movies(
     title,
