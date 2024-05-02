@@ -1,18 +1,41 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:wght@200&display=swap'); 
-
-
 body {
-    font-family: "Outfit", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #252323 !important;
+  background-color: #252323;
 }
 
-.container {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p{
+  font-family: "Outfit", sans-serif;
+}
+h2,h3,h4,h5,h6{
+  font-family: 'Hind Madurai', sans-serif;
+}
+img, video{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+img, video{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a{
+  text-decoration: none;
+  color: #301a4bff;
+  transition: 1s;
+}
+/* .container {
     width: 80%;
     margin: 0 auto;
-}
+} */
 
 header {
     color: #fff;
@@ -38,84 +61,81 @@ h3 {
   height: 50px;
 }
 
+/* HEADER */
+
+.search-user {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999; 
+  display: flex;
+  align-items: center;
+}
+.form-control {
+  width: 200px;
+  margin-right: 10px;
+}
+.fas.fa-user-circle {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+#carouselExampleFade {
+  position: relative;
+}
+.carousel-item {
+  height: 600px; 
+  background-size: cover;
+  background-position: center;
+}
+.carousel-inner {
+  position: relative;
+}
+
 /* navigation */
 nav {
-    background-color: transparent; 
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
 
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between; /* Evenly space the links */
-  }
-  
-  li {
-    padding: 10px;
-  }
-  
-  a {
-    color: #fff; /* Link text color */
-    text-decoration: none;
-    position: relative;
-  }
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
 
-  a:link {
-    text-decoration: none;
-    color: #fff !important;
-  }
-  
-  a::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    height: 2px;
-    background-color: transparent;
-    width: 0;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Smooth transition */
-    color: #fff;
-  }
-  
-  a:hover::after {
-    width: 100%;
-    left: 0;
-    background-color: red; /* Underline color */
-  }
-  
-  a::before {
-    content: ''; /* Ensure underline is hidden by default */
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: transparent;
-    transition: width 0.3s ease-in-out; /* Smooth transition */
-  }
-  
-  a:hover::before {
-    width: 100%; /* Ensure underline is shown when hovered over */
-    background-color: red; /* Underline color */
-  }
+.navbar-nav .nav-item .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  background-color: red;
+}
 
-  a:visited {
-    color: #fff;
-  }
-  
+.navbar-nav .nav-item .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: transparent;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+  width: 100%;
+  background-color: red;
+}
+
+.navbar-nav .nav-item .nav-link:visited {
+  color: #fff;
+}
+
   /* end navigation   */
 
 .hero {
-    background-image: url('hero.jpg');
+    /* background-image: url('hero.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     color: #fff;
     padding: 100px 0;
     text-align: center;
@@ -125,15 +145,6 @@ nav {
     margin-top: 0;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #FF5733;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
 
 .movies {
     padding: 50px 0;
@@ -156,7 +167,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    width: 100%;
+
 }
 
 
