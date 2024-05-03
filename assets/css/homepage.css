@@ -777,6 +777,7 @@
     right: 2px;
     bottom: 2px;
   }
+<<<<<<< HEAD
 
 
 
@@ -838,10 +839,31 @@
 
   .navbar-list {
     all: unset;
+=======
+  
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: hsla(204, 18%, 11%, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: var(--transition-2);
+  }
+  
+  .overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+
+  .filter-list {
+>>>>>>> f90b359776b5d8d5429ecf96869e73b8b402face
     display: flex;
     align-items: center;
     gap: 10px;
   }
+<<<<<<< HEAD
 
   .navbar-link {
     border-bottom: none;
@@ -1064,3 +1086,195 @@
   }
 
 }
+=======
+  
+  .upcoming .filter-btn {
+    color: var(--white);
+    background: var(--raisin-black);
+    font-size: var(--fs-11);
+    font-weight: var(--fw-500);
+    border: 2px solid var(--gunmetal-1);
+    padding: 12px 26px;
+    border-radius: 50px;
+  }
+  
+ 
+ 
+
+  
+
+  
+/* RESPONSIVE */
+  @media (min-width: 550px) {
+
+    :root {
+      --fs-1: 42px;
+    }
+  
+    .container {
+      max-width: 540px;
+      margin-inline: auto;
+    }
+
+    .movies-list {
+      grid-template-columns: 1fr 1fr;
+      gap: 60px 30px;
+    }
+  
+
+  }
+  @media (min-width: 768px) {
+    :root {
+      --fs-2: 36px;
+  
+    }
+    .container { max-width: 720px; } 
+
+  
+  
+    .detail-subtitle { --fs-5: 26px; }
+  
+    .detail-title { --fs-1: 50px; }
+  
+  }
+  
+  @media (min-width: 992px) {
+  
+    .container { max-width: 960px; }
+  
+    .movies-list { grid-template-columns: repeat(3, 1fr); }
+  
+  
+  
+    .overlay { display: none; }
+  
+  
+
+
+  
+    .movie-detail { padding-bottom: 200px; }
+  
+    .movie-detail .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+  
+    .movie-detail-banner,
+    .details-actions { margin: 0; }
+  
+    .download-btn {
+      position: absolute;
+      left: 15px;
+      bottom: -80px;
+    }
+  
+  }
+  
+  
+  
+  
+  
+  /**
+   * responsive for large than 1200px screen
+   */
+  
+  @media (min-width: 1200px) {
+  
+    /**
+     * CUSTOM PROPERTY
+     */
+  
+    :root {
+  
+      /**
+       * typography
+       */
+  
+      --fs-1: 60px;
+      --fs-4: 26px;
+  
+    }
+  
+  
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .container { max-width: 1320px; }
+  
+    /* MOVIE CARD */
+  
+    .movies-list { grid-template-columns: repeat(4, 1fr); }
+  
+  
+  
+    /**
+     * HEADER
+     */
+
+  
+  
+    /**
+     * HERO
+     */
+  
+  
+  
+    /**
+     * UPCOMING
+     */
+  
+    .upcoming .movies-list > li { min-width: calc(25% - 22.5px); }
+  
+  
+  
+    /**
+     * SERVICE
+     */
+  
+    .service-content { width: calc(100% - 700px); }
+  
+    .service-btn { right: -20px; }
+  
+    .service-list,
+    .service-title { max-width: 480px; }
+  
+  
+  
+    /**
+     * CTA
+     */
+  
+    .cta .container { max-width: 1150px; }
+  
+  
+  
+    /**
+     * MOVIE DETAIL
+     */
+  
+    .movie-detail { padding-bottom: var(--section-padding); }
+  
+    .movie-detail-content { max-width: 620px; }
+  
+    .detail-title { --fs-1: 60px; }
+  
+    .download-btn {
+      left: auto;
+      right: 15px;
+      bottom: 0;
+      transform: rotate(0.25turn) translateY(100%);
+      transform-origin: bottom right;
+      padding: 40px 50px;
+    }
+  
+    .download-btn ion-icon {
+      font-size: 30px;
+      transform: rotate(-0.25turn);
+    }
+  
+  }
+>>>>>>> f90b359776b5d8d5429ecf96869e73b8b402face
