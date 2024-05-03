@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="assets/media/logo/CineTrackWithBackground.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/homepage.css">
   <link rel="stylesheet" href="assets/css/footer.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -16,14 +17,16 @@
 
 <body>
   <header>
-    <!-- SEARCH AND LOGIN -->
-    <div class="search-user">
-      <form action="search.php" method="GET">
-        <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
-      </form>
-      <i class="fas fa-user-circle"></i>
+    <!-- SEARCH -->
+    <div class="search">
+        <form action="search.php" method="GET" >
+          <input type="search" name="query" class="input" placeholder="Search...">
+            <i class="fas fa-search btn"></i>
+        </form>
     </div>
 
+
+    
     <!-- CAROUSEL -->
 
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -92,30 +95,42 @@
   </section>
 
 
+
   <section class="movies">
     <div class="container">
       <h2>Featured Movies</h2>
-      <div class="movie-grid">
+      <div class="movies-list">
         <?php
         // Connect to database
         require './config.php';
 
         // Query to fetch movies
-        $sql = "SELECT * FROM movies ORDER BY CAST(rating AS DECIMAL) DESC";
+        //WHERE rating >= 8.3 ORDER BY CAST(rating AS DECIMAL) DESC
+        $sql = "SELECT * FROM movies ";
         $result = $conn->query($sql);
 
-        // Display movies
         if ($result->num_rows > 0) {
+          // Output data of each row
           while ($row = $result->fetch_assoc()) {
-            // Dynamically generate movie links
-            $movie_title = urlencode($row['title']);
-            echo '<a href="movie.php?movie=' . $movie_title . '" class="movie">';
-            echo '<img src="' . $row['img_path'] . '" alt="' . $row['title'] . '">';
-            echo '<h3>' . $row['title'] . '</h3>';
-            echo '</a>';
+        ?>
+            <div class="movie-card">
+              <div class="card-banner">
+                <img src="<?php echo $row["img_path"]; ?>" alt="<?php echo $row["title"]; ?>">
+              </div>
+              <div class="title-wrapper">
+                <h2 class="card-title"><?php echo $row["title"]; ?></h2>
+                <time><?php echo $row["date"]; ?></time>
+              </div>
+              <div class="card-meta">
+                <span class="badge"><?php echo $row["genre"]; ?></span>
+                <span class="rating"><ion-icon name="star"></ion-icon><?php echo $row["rating"]; ?></span>
+                <span class="duration"><ion-icon name="time"></ion-icon><?php echo $row["length"]; ?> mins</span>
+              </div>
+            </div>
+        <?php
           }
         } else {
-          echo "No movies found";
+          echo "0 results";
         }
 
         // Close connection
@@ -124,6 +139,10 @@
       </div>
     </div>
   </section>
+
+
+
+
 
 
 

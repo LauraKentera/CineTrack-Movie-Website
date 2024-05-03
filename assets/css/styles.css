@@ -1,25 +1,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:wght@200&display=swap'); 
-
-input[name="query"]::-webkit-search-cancel-button {
-  appearance: none;
-}
-
 body {
   background-color: #252323;
 }
 
-*{
+  
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-p{
-  font-family: "Outfit", sans-serif;
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+a,
+img,
+span,
+input,
+button,
+ion-icon { display: block; }
+
+input {
+  font: inherit;
+  width: 100%;
+  border: none;
 }
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Hind Madurai', sans-serif;
-}
+
 img, video{
   max-width: 100%;
   height: auto;
@@ -37,10 +45,7 @@ a{
   color: #301a4bff;
   transition: 1s;
 }
-/* .container {
-    width: 80%;
-    margin: 0 auto;
-} */
+
 
 header {
     color: #fff;
@@ -67,20 +72,57 @@ h3 {
 }
 
 /* HEADER */
-
-.search-user {
+/* SEARCH */
+.search {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 0;
   z-index: 999; 
   display: flex;
   align-items: center;
+  background-color: transparent;
+  margin-right: 1rem;
 }
+input[name="query"]::-webkit-search-cancel-button {
+  appearance: none;
+}
+.search .input{
+  background-color: transparent;
+  border-bottom: 2px solid #ccc;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+  color: #ccc;
+}
+.btn {
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+  }
+  .btn:focus,
+  .input:focus {
+  outline: none;
+  }
+  .search.active .input {
+  width: 200px;
+  color: #ccc;
+  }
+  .search.active .btn {
+  transform: translateX(198px);
+  }
 .form-control {
   width: 200px;
   margin-right: 10px;
 }
-.fas.fa-user-circle {
+.fas.fa-search {
   font-size: 24px;
   color: white;
   cursor: pointer;
