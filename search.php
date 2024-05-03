@@ -42,23 +42,25 @@
 
               $movie_title = urlencode($row['title']);
         ?>
-              <div class="movie-card">
+              <a href="movie.php?movie=<?php echo urlencode($row["title"]); ?>" class="movie-card">
 
-                <div class="card-banner">
+                <div class="movie-card">
 
-                  <img src="<?php echo $row["img_path"]; ?>" alt="<?php echo $row["title"]; ?>">
+                  <div class="card-banner">
 
+                    <img src="<?php echo $row["img_path"]; ?>" alt="<?php echo $row["title"]; ?>">
+
+                  </div>
+                  <div class="title-wrapper">
+                    <h2 class="card-title"><?php echo $row["title"]; ?></h2>
+                    <time><?php echo $row["date"]; ?></time>
+                  </div>
+                  <div class="card-meta">
+                    <span class="badge"><?php echo $row["genre"]; ?></span>
+                    <span class="rating"></ion-icon><?php echo $row["rating"]; ?></span>
+                    <span class="duration"><?php echo $row["length"]; ?> mins</span>
+                  </div>
                 </div>
-                <div class="title-wrapper">
-                  <h2 class="card-title"><?php echo $row["title"]; ?></h2>
-                  <time><?php echo $row["date"]; ?></time>
-                </div>
-                <div class="card-meta">
-                  <span class="badge"><?php echo $row["genre"]; ?></span>
-                  <span class="rating"></ion-icon><?php echo $row["rating"]; ?></span>
-                  <span class="duration"><?php echo $row["length"]; ?> mins</span>
-                </div>
-              </div>
               </a>
         <?php
             }
