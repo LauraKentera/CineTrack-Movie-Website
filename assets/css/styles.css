@@ -4,17 +4,30 @@ body {
   background-color: #252323;
 }
 
-*{
+  
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-p{
-  font-family: "Outfit", sans-serif;
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+a,
+img,
+span,
+input,
+button,
+ion-icon { display: block; }
+
+input {
+  font: inherit;
+  width: 100%;
+  border: none;
 }
-h2,h3,h4,h5,h6{
-  font-family: 'Hind Madurai', sans-serif;
-}
+
 img, video{
   max-width: 100%;
   height: auto;
@@ -32,10 +45,7 @@ a{
   color: #301a4bff;
   transition: 1s;
 }
-/* .container {
-    width: 80%;
-    margin: 0 auto;
-} */
+
 
 header {
     color: #fff;
