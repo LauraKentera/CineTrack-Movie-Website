@@ -56,7 +56,7 @@
       </button>
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mt-3 mb-lg-0 d-flex justify-content-between">
-        <li class="nav-item active">
+          <li class="nav-item active">
             <a class="nav-link " href="cineTrackAction.php">Action</a>
           </li>
           <li class="nav-item">
@@ -92,23 +92,15 @@
 
 
 
-  <section class="hero">
-    <div class="contafdiner">
-      <h2>Welcome to CineTrack</h2>
-      <p>Discover the latest movies, TV shows, and more!</p>
-      <a href="#" class="btn">Explore Now</a>
-    </div>
-  </section>
-
 
 
   <section class="movies">
     <div class="container">
-      <h2>Featured Movies</h2>
+      <h2 class="mb-5">Comedy Movies</h2>
       <div class="movies-list">
         <?php
         require './config.php';
-        $sql = "SELECT * FROM movies ";
+        $sql = "SELECT * FROM movies WHERE genre = 'Comedy'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
