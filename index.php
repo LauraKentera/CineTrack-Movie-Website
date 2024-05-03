@@ -12,8 +12,8 @@
    <div class="c1">
       
       <div class="c11">
-         <h1 class="mainhead">PICK YOUR SPOT</h1>
-         <p class="mainp">Just click the buttons below to toggle between SignIn & SignUp</p>
+         <!-- <h1 class="mainhead">PICK YOUR SPOT</h1>
+         <p class="mainp">Just click the buttons below to toggle between SignIn & SignUp</p> -->
       </div>
       <div id="left"><h1 class="s1class"><span>SIGN</span><span class="su">IN</span>
       </h1></div>
