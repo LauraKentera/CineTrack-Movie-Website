@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:wght@200&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: #252323; /* Dark background for the whole page */
+    color: #CED2DC; /* Light grey color for text */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a, img, span, input, button, ion-icon { 
+    display: block; 
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #301a4b; /* Link color */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #A90015; /* Hover color change for links */
+}
+
+.header img {
+    width: 100vw; /* Full viewport width */
+    height: 75vh; /* 75% of the viewport height set previously */
+    display: block;
+    object-fit: cover; /* Cover the area without distorting */
+}
+
+.container {
+    width: 100%; /* Use full width */
+    margin: 0 auto; /* Centering if needed */
+    background-color: transparent; /* Remove any background color */
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    color: #fff; /* White color for titles */
+    margin-top: 1rem;
+}
+
+.release-info {
+    font-size: 14px;
+    color: #ccc; /* Lighter text for release info */
+    text-align: center;
+}
+
+.rating {
+    font-size: 24px;
+    color: #A90015; /* Specific red color for ratings */
+    text-align: center;
+    margin: 20px 0;
+}
+
+.description {
+    line-height: 1.6;
+    padding: 0 15px; /* Padding for text content */
+}
+
+.director-info h2, .actor-info h2 {
+    color: #A90015; /* Red color for headings */
+    padding: 15px 0; /* Padding for spacing */
+}
+
+.director-info p, .actor-info p {
+    color: #CED2DC; /* Consistent with body text color */
+    padding: 0 15px; /* Padding for text content */
+}
+
+.media-review-container {
+    display: flex;
+    align-items: flex-end; /* Align the children at the bottom */
+}
+
+.video-container, .review-container {
+    width: 50%; /* Split the width equally */
+}
+
+.reviews-section {
+    max-height: 315px; /* Adjust this to match the height of the video container */
+    overflow: hidden; /* Hide overflow by default */
+    color: #fff;
+    padding: 15px;
+}
+
+.reviews-section:hover, .reviews-section:focus-within {
+    overflow-y: auto; /* Enable vertical scrolling on hover or focus within */
+}
+
+/* Custom scrollbar styles */
+.reviews-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.reviews-section::-webkit-scrollbar-thumb {
+    background-color: rgba(169, 0, 21, 0);
+    border-radius: 4px;
+}
+
+.reviews-section:hover::-webkit-scrollbar-thumb, .reviews-section:focus-within::-webkit-scrollbar-thumb {
+    background-color: rgba(169, 0, 21, 0.8);
+}
+
+.reviews-section::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#reviews {
+    margin-bottom: 20px;
+}
+
+#reviewForm textarea {
+    width: 100%;
+    min-height: 20px;
+    max-height: 100px; /* Limit maximum height to prevent overlap */
+    padding: 70px 10px 10px; /* Increased top padding to push text down */
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: #ccc;
+    resize: none;
+    overflow: auto; /* Allow scrolling when content exceeds max height */
+    transition: all 0.3s;
+    font-size: 16px;
+    outline: none;
+    position: relative; /* Ensure positioning is relative to container */
+}
+
+
+#reviewForm textarea:focus {
+    height: auto; /* Adjust height automatically */
+}
+
+#reviewForm textarea::placeholder {
+    color: #ccc; /* Light grey color for placeholder text */
+}
+
+#reviewForm button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #A90015;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: none; /* Explicitly remove any shadow */
+}
+
+
+@media (max-width: 768px) {
+    .header img {
+        height: 50vh; /* Smaller height on mobile */
+    }
+}
