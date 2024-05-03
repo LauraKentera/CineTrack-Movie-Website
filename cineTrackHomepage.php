@@ -57,25 +57,25 @@
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mt-3 mb-lg-0 d-flex justify-content-between">
           <li class="nav-item">
-            <a class="nav-link " href="cineTrackAction.html">Action</a>
+            <a class="nav-link " href="cineTrackAction.php">Action</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cineTrackAnimated.html">Animated</a>
+            <a class="nav-link" href="cineTrackAnimated.php">Animated</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cineTrackComedy.html">Comedy</a>
+            <a class="nav-link" href="cineTrackComedy.php">Comedy</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cineTrackHorror.html">Horror</a>
+            <a class="nav-link" href="cineTrackHorror.php">Horror</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cineTrackRomance.html">Romance</a>
+            <a class="nav-link" href="cineTrackRomance.php">Romance</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cineTrackSciFi.html">Sc-Fi</a>
+            <a class="nav-link" href="cineTrackSciFi.php">Sc-Fi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cineTrackThriller.html">Thriller</a>
+            <a class="nav-link" href="cineTrackDrama.php">Drama</a>
           </li>
 
         </ul>
