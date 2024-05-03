@@ -18,11 +18,12 @@
   <header>
     <!-- SEARCH AND LOGIN -->
     <div class="search-user">
-
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
+      <form action="search.php" method="GET">
+        <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
+      </form>
       <i class="fas fa-user-circle"></i>
     </div>
+
     <!-- CAROUSEL -->
 
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -91,38 +92,38 @@
   </section>
 
 
-    <section class="movies">
-      <div class="container">
-        <h2>Featured Movies</h2>
-        <div class="movie-grid">
-          <?php
-          // Connect to database
-          require './config.php';
+  <section class="movies">
+    <div class="container">
+      <h2>Featured Movies</h2>
+      <div class="movie-grid">
+        <?php
+        // Connect to database
+        require './config.php';
 
-          // Query to fetch movies
-          $sql = "SELECT * FROM movies WHERE rating >=8.3 ORDER BY CAST(rating AS DECIMAL) DESC";
-          $result = $conn->query($sql);
+        // Query to fetch movies
+        $sql = "SELECT * FROM movies ORDER BY CAST(rating AS DECIMAL) DESC";
+        $result = $conn->query($sql);
 
-          // Display movies
-          if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-              echo '<div class="movie">';
-              echo '<img src="' . $row['img_path'] . '" alt="' . $row['title'] . '">';
-              echo '<h3>' . $row['title'] . '</h3>';
-              echo '</div>';
-            }
-          } else {
-            echo "No movies found";
+        // Display movies
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            // Dynamically generate movie links
+            $movie_title = urlencode($row['title']);
+            echo '<a href="movie.php?movie=' . $movie_title . '" class="movie">';
+            echo '<img src="' . $row['img_path'] . '" alt="' . $row['title'] . '">';
+            echo '<h3>' . $row['title'] . '</h3>';
+            echo '</a>';
           }
+        } else {
+          echo "No movies found";
+        }
 
-          // Close connection
-          $conn->close();
-          ?>
-        </div>
+        // Close connection
+        $conn->close();
+        ?>
       </div>
-    </section>
-
-
+    </div>
+  </section>
 
 
 
@@ -137,7 +138,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="assets/js/main.js"></script>
-  
+
 
 </body>
 

@@ -1,5 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:wght@200&display=swap'); 
+
+input[name="query"]::-webkit-search-cancel-button {
+  appearance: none;
+}
+
 body {
   background-color: #252323;
 }
@@ -12,7 +17,7 @@ body {
 p{
   font-family: "Outfit", sans-serif;
 }
-h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6{
   font-family: 'Hind Madurai', sans-serif;
 }
 img, video{
