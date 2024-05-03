@@ -53,7 +53,6 @@
                   </div>
                   <div class="title-wrapper">
                     <h2 class="card-title"><?php echo $row["title"]; ?></h2>
-                    <time><?php echo $row["date"]; ?></time>
                   </div>
                   <div class="card-meta">
                     <span class="badge"><?php echo $row["genre"]; ?></span>

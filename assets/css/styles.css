@@ -19,8 +19,7 @@ a,
 img,
 span,
 input,
-button,
-ion-icon { display: block; }
+button { display: block; }
 
 input {
   font: inherit;
@@ -111,6 +110,7 @@ input[name="query"]::-webkit-search-cancel-button {
   .input:focus {
   outline: none;
   }
+
   .search.active .input {
   width: 200px;
   color: #ccc;

@@ -1,14 +1,11 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Information</title>
-
 </head>
-<body >  
+<body>
     <h1>Movie Information</h1>
     <?php
         require 'config.php';
