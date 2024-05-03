@@ -1,28 +1,24 @@
-// const searchInput = document.getElementById('searchInput');
+const search = document.querySelector('.search');
+const btn = document.querySelector('.btn');
+const input = document.querySelector('.input');
+const moviesConatainer = document.querySelector('.movies.movies-list')
 
-// searchInput.addEventListener('input', function() {
-//   const searchTerm = this.value.trim();
 
-//   // Fetch matching titles from the server
-//   fetch(`/search?term=${searchTerm}`)
-//     .then(response => response.json())
-//     .then(data => {
-//       // Update the displayed titles based on the response
-//       updateDisplayedTitles(data);
-//     })
-//     .catch(error => console.error('Error fetching data:', error));
-// });
+btn.addEventListener('click', () => {
+  search.classList.toggle('active');
+  if (search.classList.contains('active')) {
+    input.focus();
+    const inputWidth = input.offsetWidth;
+    const btnWidth = btn.offsetWidth;
+    const translation = inputWidth + btnWidth + 10; 
+    btn.style.transform = `translateX(calc(100% - ${translation}px))`; 
+  } else {
+    btn.style.transform = 'none'; 
+  }
+});
 
-// function updateDisplayedTitles(titles) {
-//   // Assuming you have a container for displaying titles with the class "movie-grid"
-//   const movieGrid = document.querySelector('.movie-grid');
-//   movieGrid.innerHTML = ''; // Clear previous titles
 
-//   // Create and append new title elements
-//   titles.forEach(title => {
-//     const movieElement = document.createElement('div');
-//     movieElement.classList.add('movie');
-//     movieElement.innerHTML = `<img src="${title.img_path}" alt="${title.title}"> <h3>${title.title}</h3>`;
-//     movieGrid.appendChild(movieElement);
-//   });
-// }
+
+
+
+
