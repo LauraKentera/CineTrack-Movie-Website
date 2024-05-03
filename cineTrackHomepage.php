@@ -19,14 +19,14 @@
   <header>
     <!-- SEARCH -->
     <div class="search">
-        <form action="search.php" method="GET" >
-          <input type="search" name="query" class="input" placeholder="Search...">
-            <i class="fas fa-search btn"></i>
-        </form>
+      <form action="search.php" method="GET">
+        <input type="search" name="query" class="input">
+        <i class="fas fa-search btn"></i>
+      </form>
     </div>
 
 
-    
+
     <!-- CAROUSEL -->
 
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -101,11 +101,7 @@
       <h2>Featured Movies</h2>
       <div class="movies-list">
         <?php
-        // Connect to database
         require './config.php';
-
-        // Query to fetch movies
-        //WHERE rating >= 8.3 ORDER BY CAST(rating AS DECIMAL) DESC
         $sql = "SELECT * FROM movies ";
         $result = $conn->query($sql);
 
@@ -113,20 +109,25 @@
           // Output data of each row
           while ($row = $result->fetch_assoc()) {
         ?>
-            <div class="movie-card">
-              <div class="card-banner">
-                <img src="<?php echo $row["img_path"]; ?>" alt="<?php echo $row["title"]; ?>">
+            <a href="movie.php?movie=<?php echo urlencode($row["title"]); ?>" class="movie-card">
+              <div class="movie-card">
+
+                <div class="card-banner">
+
+                  <img src="<?php echo $row["img_path"]; ?>" alt="<?php echo $row["title"]; ?>">
+
+                </div>
+                <div class="title-wrapper">
+                  <h2 class="card-title"><?php echo $row["title"]; ?></h2>
+                  <time><?php echo $row["date"]; ?></time>
+                </div>
+                <div class="card-meta">
+                  <span class="badge"><?php echo $row["genre"]; ?></span>
+                  <span class="rating"></ion-icon><?php echo $row["rating"]; ?></span>
+                  <span class="duration"><?php echo $row["length"]; ?> mins</span>
+                </div>
               </div>
-              <div class="title-wrapper">
-                <h2 class="card-title"><?php echo $row["title"]; ?></h2>
-                <time><?php echo $row["date"]; ?></time>
-              </div>
-              <div class="card-meta">
-                <span class="badge"><?php echo $row["genre"]; ?></span>
-                <span class="rating"><ion-icon name="star"></ion-icon><?php echo $row["rating"]; ?></span>
-                <span class="duration"><ion-icon name="time"></ion-icon><?php echo $row["length"]; ?> mins</span>
-              </div>
-            </div>
+            </a>
         <?php
           }
         } else {
