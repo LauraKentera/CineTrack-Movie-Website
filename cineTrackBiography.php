@@ -1,9 +1,36 @@
 <?php
 include "./assets/inc/header1.php";
 ?>
-<div class="carousel-item active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.416),rgba(0, 0, 0, 0.581)), url(assets/media/dune.webp);"></div>
-<div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.416),rgba(0, 0, 0, 0.581)), url(assets/media/wonka.jpeg);"></div>
-<div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.416),rgba(0, 0, 0, 0.581)), url(assets/media/oppenhaimer.jpeg);"></div>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <?php
+    require './config.php';
+    // Select three random wideImagePath from the movies table
+    $sql = "SELECT * FROM movies WHERE genre = 'Biography'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+      $active = true;
+      // Output data of each row
+      while ($row = $result->fetch_assoc()) {
+    ?>
+        <div class="carousel-item <?php echo $active ? 'active' : ''; ?>">
+          <img src="<?php echo $row["wideImagePath"]; ?>" class="d-block w-100" alt="...">
+        </div>
+    <?php
+        $active = false;
+      }
+    } else {
+      echo "0 results";
+    }
+
+    // Close connection
+    $conn->close();
+    ?>
+  </div>
+</div>
+
 <?php
 include "./assets/inc/header2.php";
 ?>
