@@ -12,9 +12,9 @@ const DB_DATABASE = 'movies_database'; // Name of the database
 // you see host is localhost, this mean code must be on serenity to access it's local database
 // const DB_HOSTNAME = 'localhost';
 // const DB_PORT = '3308';
-// const DB_USER = 'kp6694'; //eg. ab1234
-// const DB_PASSWORD = 'Shogun6$rurally'; // passowrd from my.cnf file in your serenity home directory
-// const DB_DATABASE = 'kp6694'; // eg. ab1234
+// const DB_USER = ''; //eg. ab1234
+// const DB_PASSWORD = ''; // passowrd from my.cnf file in your serenity home directory
+// const DB_DATABASE = ''; // eg. ab1234
 
 $conn = mysqli_connect(DB_HOSTNAME, DB_USER, DB_PASSWORD,  DB_DATABASE, DB_PORT);
 
