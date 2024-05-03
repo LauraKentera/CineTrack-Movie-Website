@@ -1,14 +1,9 @@
 
-<<<<<<< HEAD
--- CREATE DATABASE IF NOT EXISTS movies_database;
-=======
 CREATE DATABASE IF NOT EXISTS movies_database;
->>>>>>> 3d5ba7f1b7ebd225c79b872f73361ab0f4a88201
 
 USE movies_database;
 
 CREATE TABLE IF NOT EXISTS movies(
-<<<<<<< HEAD
   id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(50),
   date DATE,
@@ -21,7 +16,6 @@ CREATE TABLE IF NOT EXISTS movies(
 
 
 
-=======
   'id'  AUTO_INCREMENT PRIMARY KEY,
   'title' VARCHAR(50),
   'date' DATE,
@@ -30,10 +24,10 @@ CREATE TABLE IF NOT EXISTS movies(
   'genre' VARCHAR(30),
   'rating' VARCHAR(5),
   'img_path' VARCHAR(1000)
-);
+;
 
 
->>>>>>> 3d5ba7f1b7ebd225c79b872f73361ab0f4a88201
+
 INSERT INTO
   movies(
     title,

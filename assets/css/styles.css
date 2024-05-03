@@ -1,29 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:wght@200&display=swap'); 
+body {
+  background-color: #252323;
+}
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-<<<<<<< HEAD
 p{
   font-family: "Outfit", sans-serif;
 }
 h2,h3,h4,h5,h6{
   font-family: 'Hind Madurai', sans-serif;
 }
-=======
 img, video{
   max-width: 100%;
   height: auto;
   display: block;
 }
 
->>>>>>> 3d5ba7f1b7ebd225c79b872f73361ab0f4a88201
-body {
-    background-color: #252323 !important;
-}
+
 img, video{
   max-width: 100%;
   height: auto;

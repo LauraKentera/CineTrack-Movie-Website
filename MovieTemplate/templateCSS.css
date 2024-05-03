@@ -57,9 +57,7 @@ a:hover {
   transform: skewY(-2.2deg);
   transform-origin:0 0;
   
-  /* //chrome antialias fix */
   -webkit-backface-visibility: hidden; 
-  
 }
 
 .cover {
