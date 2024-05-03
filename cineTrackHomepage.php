@@ -99,6 +99,7 @@
   <section class="movies">
     <div class="container">
       <h2>Featured Movies</h2>
+      <a href="movie.php?movie="<?php urldecode($row["title"]); ?>>
       <div class="movies-list">
         <?php
         // Connect to database
@@ -137,6 +138,7 @@
         $conn->close();
         ?>
       </div>
+      </a>
     </div>
   </section>
 
