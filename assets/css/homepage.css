@@ -9,7 +9,7 @@
 
   
   .section-subtitle {
-    color: rgb(226, 215, 3);
+    color: rgb(143, 137, 19);
     font-size: var(--fs-11);
     font-weight: var(--fw-500);
     text-transform: uppercase;
@@ -71,14 +71,16 @@
   
   .movie-card .card-title {
     color: #fff;
-    font-size: 20px;
+    font-size: 25px;
     transition: 0.15s ease;
   }
   
-  .movie-card .card-title:is(:hover, :focus) { color: rgb(226, 215, 3);; }
+  .movie-card .card-title:is(:hover, :focus) { 
+    color: rgb(226, 215, 3);
+   }
   
   .movie-card .title-wrapper time {
-    color: rgb(226, 215, 3);;
+    color: rgb(152, 145, 15);
     font-size: 12px;
     font-weight: 500;
   }
@@ -90,7 +92,12 @@
     gap: 15px;
   }
   
-  .movie-card .badge { color: rgb(226, 215, 3);; }
+  .movie-card .badge {
+     color: rgb(190, 182, 36);
+     font-size: 18px;
+     padding: 0;
+   }
+
   
   .movie-card .duration { margin-left: auto; }
   
@@ -143,11 +150,6 @@
   }
   
  
- 
-
-  
-
-  
 /* RESPONSIVE */
   @media (min-width: 550px) {
 

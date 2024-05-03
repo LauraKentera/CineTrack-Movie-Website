@@ -15,6 +15,7 @@
         $movie = null;
 
         if (isset($_GET['movie'])) {
+            
             $movie_title = $_GET['movie'];
 
             $movie_title = $conn->real_escape_string($movie_title);
