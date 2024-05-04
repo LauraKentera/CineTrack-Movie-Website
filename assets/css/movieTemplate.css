@@ -165,4 +165,9 @@ a:hover {
     .header img {
         height: 50vh; /* Smaller height on mobile */
     }
+
+    
+}
+@media screen {
+    
 }
