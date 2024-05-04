@@ -1,6 +1,7 @@
 body {
 	background:#FAF3EC;
    font-family: 'Roboto';
+   background-image:linear-gradient(rgba(20, 13, 14, 0.5818),rgba(24, 10, 10, 0.581)), url('../media/movieCollage.webp');
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #748194;
@@ -33,7 +34,7 @@ body {
 }
 
 .c11{
-   background-image:url('https://i.pinimg.com/736x/b8/09/22/b80922f6ea2daaf36a6627378662803b--deck-of-cards-phone-wallpapers.jpg');
+   background-image:url('../media/signIn.webp');
    background-size:300px 400px;
    background-repeat: no-repeat;
    background-color:white;
@@ -53,13 +54,13 @@ body {
    cursor:pointer;
 }
 #left{
-   border-radius:15px 0px 0px 15px;
+   border-radius:15px 15px 15px 15px;
 }
 #right{
    border-radius:15px 15px 15px 0px;
 }
 .left_hover{
-   color:#EE9BA3;
+   color:#A90015;
    box-shadow: 5px 0 18px -10px #333;
    z-index:1;
    position:absolute;
@@ -76,8 +77,15 @@ body {
    left:63%;
    margin-left: -50%;
 }
-.s1class span,  .s2class span{
+
+.s1class span{
    display:block;
+
+   
+}  
+.s2class span{
+   display:block;
+
 }
 .su{
    font-size:20px;
@@ -90,13 +98,13 @@ body {
    margin-right: -50%;
 }
 .mainhead{
-   color:white;
+   color:#A90015;
    font-size:24px;
    text-align:center;
    margin-top:50px;
 }
 .mainp{
-   color:white;
+   color:#d3a23f;
    font-size:13px;
    text-align:center;
    margin-top:10px;
@@ -132,12 +140,12 @@ body {
    border-radius: 5px;
    outline: none;
    border: none;
-   background: #EE9BA3;
+   background: #A90015;
    color: white;
    font-size: 14px;
 }
 .signup1{
-   color:#748194;
+   color:#d3a23f !important;
    font-size:30px;
    text-align:center;
 }
@@ -145,13 +153,15 @@ a{
    text-decoration: none;
 }
 .signup2{
-   color:#748194;
+   color:#d3a23f;
    font-size:20px;
    text-align:center;
 }
 .signup{
    display:initial;
+
 }
 .signin{
    display:initial;
+
 }

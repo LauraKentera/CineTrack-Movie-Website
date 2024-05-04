@@ -1,7 +1,85 @@
-footer {
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.subscribe {
     background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+}
+
+.links div {
+    margin-bottom: 20px;
+}
+
+.links h4, .order h4 {
+    color: #FF6F61; /* Adjust color to match design */
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links ul li {
+    margin-bottom: 5px;
+}
+
+.links ul li a {
+    color: #FF6F61; /* Adjust link color */
+    text-decoration: none;
+}
+
+.links ul li a:hover {
+    text-decoration: underline;
+}
+
+.order {
+    background-color: #FF6F61;
+    color: #000;
+    padding: 20px;
+}
+
+.order button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.order button:hover {
+    background-color: #555;
+}
+
+input[type="email"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: calc(100% - 22px); /* Adjust width to fit padding */
+    border: none;
+}
+
+button {
     width: 100%;
+    padding: 10px;
+    background-color: #FF6F61;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E64A19;
+}
+
+footer {
+    color: white;
+    background-color: #333;
 }

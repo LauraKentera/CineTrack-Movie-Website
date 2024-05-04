@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/movieTemplate.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/movieTemplate.css">
     <title>Movie Information</title>
 </head>
 <body>
@@ -41,6 +43,9 @@
 
         if ($movie): 
     ?>
+    <div class="header">
+        <?php if (isset($movie) && !empty($movie['image'])): ?>
+            <img src="<?php echo $movie['image']; ?>" alt="<?php echo $movie['title']; ?> Movie Poster" class="img-fluid">
     <div class="header">
         <?php if (isset($movie) && !empty($movie['image'])): ?>
             <img src="<?php echo $movie['image']; ?>" alt="<?php echo $movie['title']; ?> Movie Poster" class="img-fluid">
@@ -115,6 +120,8 @@
     <?php else: ?>
         <p>Sorry, the movie information is not available.</p>
     <?php endif; ?>
+
+    <script src="assets/js/reviewForm.js"></script>
 
     <script src="assets/js/reviewForm.js"></script>
 </body>
