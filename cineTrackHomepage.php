@@ -14,7 +14,6 @@ include "./assets/inc/header2.php";
     <div class="contafdiner">
       <h2>Welcome to CineTrack</h2>
       <p>Discover the latest movies, TV shows, and more!</p>
-      <a href="#" class="btn">Explore Now</a>
     </div>
   </section>
 
