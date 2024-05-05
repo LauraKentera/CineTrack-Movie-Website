@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../css/footer.css">
 <footer class="footer">
     <div class="footer-section subscribe">
         <h2>F</h2>

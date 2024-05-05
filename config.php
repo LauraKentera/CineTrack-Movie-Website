@@ -18,7 +18,7 @@ if (!defined('DB_PASSWORD')) {
 }
 
 if (!defined('DB_DATABASE')) {
-    define('DB_DATABASE', 'movies_database'); // Name of the database
+    define('DB_DATABASE', 'movies'); // Name of the database
 }
 
 // Example database hosted on serenity.rit.edu (your code must be on serenity for this to work)

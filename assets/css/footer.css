@@ -75,9 +75,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #E64A19;
-}
 
 footer {
     color: white;
