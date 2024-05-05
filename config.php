@@ -14,7 +14,7 @@ if (!defined('DB_USER')) {
 }
 
 if (!defined('DB_PASSWORD')) {
-    define('DB_PASSWORD', ''); // Database password
+    define('DB_PASSWORD', 'Atrium4+pimp'); // Database password
 }
 
 if (!defined('DB_DATABASE')) {
