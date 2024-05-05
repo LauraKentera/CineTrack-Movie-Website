@@ -2,10 +2,10 @@ function submitReview() {
     var reviewText = document.getElementById("reviewText").value;
 
     document.getElementById('reviewText').addEventListener('input', function() {
-        if (this.scrollHeight > 100) {  // If scroll height is greater than 100px, enable scroll
+        if (this.scrollHeight > 100) {  
             this.style.overflowY = 'scroll';
         } else {
-            this.style.height = 'auto';  // Else, adjust height dynamically
+            this.style.height = 'auto';  
             this.style.height = this.scrollHeight + 'px';
         }
     });
@@ -26,7 +26,7 @@ function submitReview() {
     .then(response => response.text())
     .then(data => {
         document.getElementById("reviews").innerHTML += `<p>${reviewText}</p>`; // Display the new review
-        document.getElementById("reviewText").value = ''; // Clear the textarea
+        document.getElementById("reviewText").value = ''; // Clear the text area
         alert("Review submitted!");
     })
     .catch(error => {
