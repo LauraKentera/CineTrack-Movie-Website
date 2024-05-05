@@ -10,8 +10,6 @@ include "./assets/inc/header2.php";
 
 
 
-
-
   <section class="hero">
     <div class="contafdiner">
       <h2>Welcome to CineTrack</h2>
@@ -68,8 +66,40 @@ include "./assets/inc/header2.php";
 
 
 
-  
-  <?php require 'assets/inc/footer.php'; ?>
+  <footer class="bg-dark text-white pt-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Discover</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Buy & Sell</a></li>
+                    <li><a href="#" class="footer-link">Merchant</a></li>
+                    <li><a href="#" class="footer-link">Giving Back</a></li>
+                    <li><a href="#" class="footer-link">Help & Support</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>About</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Staff</a></li>
+                    <li><a href="#" class="footer-link">Team</a></li>
+                    <li><a href="#" class="footer-link">Careers</a></li>
+                    <li><a href="#" class="footer-link">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Resources</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Security</a></li>
+                    <li><a href="#" class="footer-link">Global</a></li>
+                    <li><a href="#" class="footer-link">Charts</a></li>
+                    <li><a href="#" class="footer-link">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
 
   

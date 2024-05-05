@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign In/Up CineTrack</title>
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel="icon" type="image/x-icon" href="assets/media/logo/CineTrackWithBackground.ico">
+
   <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
@@ -48,7 +51,7 @@
    </div>
 </div>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script src="assets/js/index.js"></script>
 
 </body>

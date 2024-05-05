@@ -1,85 +1,23 @@
-.footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #000;
-    color: white;
+.footer-link {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* No underline by default */
+    position: relative; /* Necessary for positioning pseudo-elements */
 }
 
-.footer-section {
-    flex: 1;
-    padding: 20px;
+.footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Starts with no width */
+    height: 2px;
+    bottom: -2px; /* Position right below the text */
+    left: 50%; /* Start expanding from the middle */
+    background-color: #A90015; /* Red underline */
+    transition: all 0.3s ease; /* Smooth transition for the effect */
+    opacity: 0; /* Hide by default */
 }
 
-.subscribe {
-    background-color: #333;
-}
-
-.links div {
-    margin-bottom: 20px;
-}
-
-.links h4, .order h4 {
-    color: #FF6F61; /* Adjust color to match design */
-}
-
-.links ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.links ul li {
-    margin-bottom: 5px;
-}
-
-.links ul li a {
-    color: #FF6F61; /* Adjust link color */
-    text-decoration: none;
-}
-
-.links ul li a:hover {
-    text-decoration: underline;
-}
-
-.order {
-    background-color: #FF6F61;
-    color: #000;
-    padding: 20px;
-}
-
-.order button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.order button:hover {
-    background-color: #555;
-}
-
-input[type="email"] {
-    padding: 10px;
-    margin: 10px 0;
-    width: calc(100% - 22px); /* Adjust width to fit padding */
-    border: none;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #FF6F61;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #E64A19;
-}
-
-footer {
-    color: white;
-    background-color: #333;
+.footer-link:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to left edge */
+    opacity: 1; /* Make it visible on hover */
 }

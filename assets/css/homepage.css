@@ -106,7 +106,7 @@
 }
 
 .movie-card .badge {
-   color: rgb(190, 182, 36);
+   color: #d3a23f;
    font-size: 18px;
    padding: 0;
  }
@@ -214,7 +214,7 @@
   }
   
   .movie-card .badge {
-     color: rgb(190, 182, 36);
+     color: #d3a23f;
      font-size: 18px;
      padding: 0;
    }
