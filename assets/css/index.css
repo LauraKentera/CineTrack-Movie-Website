@@ -37,6 +37,7 @@ body {
    background-image:url('../media/signIn.jpeg');
    background-size:300px 400px;
    background-repeat: no-repeat;
+   background-color:white;
    width:300px;
    height:400px;
    display:inline-block;
@@ -52,7 +53,7 @@ body {
    cursor:pointer;
 }
 #left{
-   border-radius:15px 15px 15px 15px;
+   border-radius:15px 15px 0px 15px;
 }
 #right{
    border-radius:15px 15px 15px 0px;
@@ -108,13 +109,13 @@ body {
    margin-top:10px;
 }
 .c2{
-   background-color:white;
    width:300px;
    height:500px;
    border-radius:15px;
    position:absolute;
    left:370px;
    display:inline-block;
+   background-color: white;
 }
 .username{
    font-weight: bold;
