@@ -5,21 +5,23 @@ $(document).ready(function(){
    $("#left").removeClass("left_hover");
    $("#right").addClass("right_hover");
    $(".signin").css({"display":"none"});
-   $(".signup").css({"display":""});
+   $(".signup").css({"display":"block"});
 });
+
 $("#right").click(function(){
    $("#left").removeClass("left_hover");
    $(".s2class").css({"color":"#A90015"});
    $(".s1class").css({"color":"#748194"});
    $("#right").addClass("right_hover");
    $(".signin").css({"display":"none"});
-   $(".signup").css({"display":""});
+   $(".signup").css({"display":"block"});
 });
+
 $("#left").click(function(){
    $(".s1class").css({"color":"#A90015"});
    $(".s2class").css({"color":"#748194"}); 
    $("#right").removeClass("right_hover");
    $("#left").addClass("left_hover");
-   $(".signin").css({"display":"#A90015"});
-   $(".signup").css({"display":""});
+   $(".signin").css({"display":"block"});
+   $(".signup").css({"display":"none"});
 });

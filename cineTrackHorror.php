@@ -87,13 +87,9 @@ include "./assets/inc/header2.php";
 
 
 
-
-  <footer>
-    <div class="containefdr">
-      <p>&copy; 2024 CineTrack. All Rights Reserved.</p>
-    </div>
-  </footer>
-
+  <?php
+        include 'assets/inc/footer.php'
+        ?>
 
 
 

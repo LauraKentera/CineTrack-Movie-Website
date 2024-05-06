@@ -1,7 +1,7 @@
 body {
 	background:#FAF3EC;
    font-family: 'Roboto';
-   background-image:linear-gradient(rgba(20, 13, 14, 0.5818),rgba(24, 10, 10, 0.581)), url('../media/movieCollage.webp');
+   background-image:linear-gradient(rgba(20, 13, 14, 0.5818),rgba(24, 10, 10, 0.581)), url('../media/movieCollage.jpeg');
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #748194;
@@ -34,7 +34,7 @@ body {
 }
 
 .c11{
-   background-image:url('../media/signIn.webp');
+   background-image:url('../media/signIn.jpeg');
    background-size:300px 400px;
    background-repeat: no-repeat;
    background-color:white;
@@ -50,11 +50,10 @@ body {
    display: inline-block;
    width:146px;
    height: 500px;
-   background-color:white;
    cursor:pointer;
 }
 #left{
-   border-radius:15px 15px 15px 15px;
+   border-radius:15px 15px 0px 15px;
 }
 #right{
    border-radius:15px 15px 15px 0px;
@@ -110,13 +109,13 @@ body {
    margin-top:10px;
 }
 .c2{
-   background-color:white;
    width:300px;
    height:500px;
    border-radius:15px;
    position:absolute;
    left:370px;
    display:inline-block;
+   background-color: white;
 }
 .username{
    font-weight: bold;
